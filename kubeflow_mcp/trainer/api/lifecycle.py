@@ -35,9 +35,9 @@ logger = logging.getLogger(__name__)
 
 
 def delete_training_job(
-        name: str,
-        namespace: str | None = None,
-        confirmed: bool = False,
+    name: str,
+    namespace: str | None = None,
+    confirmed: bool = False,
 ) -> dict[str, Any]:
     """Delete a training job permanently.
 
@@ -118,10 +118,10 @@ def delete_training_job(
 
 
 def update_training_job(
-        name: str,
-        action: str,
-        namespace: str | None = None,
-        confirmed: bool = False,
+    name: str,
+    action: str,
+    namespace: str | None = None,
+    confirmed: bool = False,
 ) -> dict[str, Any]:
     """Suspend or resume a training job.
 
@@ -160,7 +160,7 @@ def update_training_job(
             past = "suspend" if action == "suspend" else "resume"
             return PreviewResponse(
                 message=f"Will {action} training job '{name}'. Set confirmed=True to proceed.",
-                config={'job': name, 'namespace': ns, 'action': action},
+                config={"job": name, "namespace": ns, "action": action},
             ).model_dump()
         if get_effective_persona() not in ("platform-admin",):
             managed = mcp_utils.is_mcp_managed(name, ns)
