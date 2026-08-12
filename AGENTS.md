@@ -69,7 +69,7 @@ kubeflow_mcp/                    # Main Python package
  loads selected clients dynamically.
 - **Workflow phases**: Plan → Discover → Train → Monitor → Lifecycle / Platform / Health.
 - **Confirm gate**: New mutating tools must preview when `confirmed=False` and execute only with
-  `confirmed=True`; `update_training_job` is a legacy exception that currently mutates immediately.
+  `confirmed=True`.
   Do not copy, weaken, or broaden that exception.
 - **Personas**: `readonly`, `data-scientist`, `ml-engineer`, `platform-admin`
   (see `core/policy.py`). New tools must be added to the correct persona allowlists.

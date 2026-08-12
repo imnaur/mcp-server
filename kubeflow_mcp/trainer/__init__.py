@@ -114,7 +114,7 @@ CLIENT_TOOL_DESCRIPTIONS: dict[str, str] = {
     "get_training_events": "Get K8s events for debugging pending/failed jobs. Supports optional namespace.",
     "wait_for_training": "Block until job reaches target status (Complete/Failed). Supports optional namespace.",
     "delete_training_job": "[DESTRUCTIVE] Delete a training job permanently. Set confirmed=True to execute.",
-    "update_training_job": "Suspend or resume a training job. Pass action='suspend' or 'resume'.",
+    "update_training_job": "Suspend or resume a training job. Set confirmed=True to execute.",
     "inspect_crd": "List Trainer CRDs or get details for a specific one. Pass name= for details.",
     "inspect_controller": "Inspect controller pod. Pass view='logs' or 'events'. Auto-discovers namespace.",
     "patch_runtime": "Strategic merge patch on a ClusterTrainingRuntime. Set confirmed=True to apply.",
