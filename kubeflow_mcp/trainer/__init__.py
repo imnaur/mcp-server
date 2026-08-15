@@ -347,7 +347,7 @@ MONITORING AND LIFECYCLE:
 - All monitoring tools accept optional namespace= to query jobs in a different namespace
 - Suspended jobs show status "Created" in the API — this is a known controller behavior
 - delete_training_job(name, confirmed=True) -> remove job permanently (preview first, non-admin personas can only delete MCP-created jobs)
-- update_training_job(name, action="suspend"|"resume") -> pause/resume without deleting (non-admin personas can only modify MCP-created jobs)""",
+- update_training_job(name, action="suspend"|"resume", confirmed=True) -> pause/resume without deleting (non-admin personas can only modify MCP-created jobs)""",
     },
     "training": {
         "full": """\
